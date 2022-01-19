@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rent Yield Calculator</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+  <h1>Rent Yield Calculator</h1>
+
+  <form class="rent-yield-calc-form">
+    <script>document.write('');</script>
+
+    <!-- INITIAL DATA -->
+    <h2>Initial Data</h2>
+
+    <label for="rent" class="rent-yield-calc-label">Rent</label>
+    <div class="input-wrapper"><input class="vis biginput R W120 rent-yield-calc-input" id="rent" name="rent" type="text" value="" onkeyup="rentalyieldCalc()">&nbsp;
+    <select class="select90" id="period" name="period" onclick="rentalyieldCalc()" onchange="rentalyieldCalc()" onkeyup="rentalyieldCalc()">
+      <option value="52">Weekly</option>
+      <option value="12" selected="selected">Monthly</option>
+      <option value="1">Annually</option>
+    </select></div>
+
+    <label for="vacancy_rate" class="rent-yield-calc-label">Exp. Average Vacancy Rate</label>
+    <div class="input-wrapper"><input class="vis biginput R W60 rent-yield-calc-input" id="vacancy_rate" name="vacancy_rate" type="text" value="10" onkeyup="rentalyieldCalc()">&nbsp;%</div>
+    
+    <label for="gei" class="rent-yield-calc-label">Gross Effective Income (annual)</label>
+    <input class="disabled vis biginput R W120 rent-yield-calc-input" disabled="" id="gei" name="gei" type="text" value="" onkeyup="rentalyieldCalc()">
+    
+    <label for="oc" class="rent-yield-calc-label">Operating Expenses (annual)</label>
+    <input class="vis biginput R W120 rent-yield-calc-input" id="oc" name="oc" type="text" value="0.00" onclick="this.value = '';" onkeyup="rentalyieldCalc()">
+  
+    <label for="noi" class="rent-yield-calc-label">Net Operating Income (annual)</label>
+    <input class="disabled vis biginput R W120 rent-yield-calc-input" disabled="" id="noi" name="noi" type="text" value="" onkeyup="rentalyieldCalc()">
+    
+    <label for="p" class="rent-yield-calc-label">Property Purchase Price</label>
+    <input class="vis biginput R W120 rent-yield-calc-input" id="p" name="p" type="text" value="" onkeyup="rentalyieldCalc()">
+  
+    <!-- RESULT -->
+    <h2>Result</h2>
+    
+    <label for="ry" class="rent-yield-calc-label">Rental Yield / Capitalization Rate</label>
+    <div class="input-wrapper"><input class="hid biginput R W60 rent-yield-calc-input" disabled="" id="ry" name="ry" type="text" value="" onkeyup="rentalyieldCalc()">&nbsp;%</div>
+    
+    <label for="pbp" class="rent-yield-calc-label">Payback Period</label>
+    <div class="input-wrapper"><input class="hid biginput R W60 rent-yield-calc-input" disabled="" id="pbp" name="pbp" type="text" value="" onkeyup="rentalyieldCalc()">&nbsp;Years</div>
+    
+  </form>
+
+  <!-- MY JAVASCRIPT FILE -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+  margin-top: 50px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.rent-yield-calc-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rent-yield-calc-label {
+  align-self: flex-start;
+}
+
+.rent-yield-calc-input {
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
